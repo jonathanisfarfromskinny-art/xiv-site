@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xiv</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background: #000;
+            color: white;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding-top: 15vh;
+            margin: 0;
+        }
+
+        /* MAIN GLITCH */
+        .glitch {
+            font-size: 70px;
+            position: relative;
+            display: inline-block;
+            color: white;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .glitch::before {
+            animation: glitchTop 1s infinite linear alternate-reverse;
+            color: #00ffff;
+            z-index: -1;
+        }
+
+        .glitch::after {
+            animation: glitchBottom 1.2s infinite linear alternate-reverse;
+            color: #ff00ff;
+            z-index: -2;
+        }
+
+        .glitch-small {
+            margin-top: 15px;
+            font-size: 18px;
+            color: #9aa0a6;
+            letter-spacing: 2px;
+        }
+
+        .code-glitch {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #00ffff;
+            letter-spacing: 4px;
+            animation: flicker 2s infinite;
+        }
+
+        @keyframes glitchTop {
+            0% { clip-path: inset(0 0 85% 0); transform: translate(-2px, -2px); }
+            50% { clip-path: inset(0 0 40% 0); transform: translate(2px, 2px); }
+            100% { clip-path: inset(0 0 70% 0); transform: translate(-1px, 1px); }
+        }
+
+        @keyframes glitchBottom {
+            0% { clip-path: inset(85% 0 0 0); transform: translate(2px, 2px); }
+            50% { clip-path: inset(40% 0 0 0); transform: translate(-2px, -2px); }
+            100% { clip-path: inset(70% 0 0 0); transform: translate(1px, -1px); }
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="glitch" data-text="xiv">xiv</h1>
+
+    <div class="glitch-small">
+        Policy • Detected • Geld • Convictings • Assume • Hateful
+    </div>
+
+    <div class="code-glitch">
+        764 333 ST
+    </div>
+
+</body>
+</html>

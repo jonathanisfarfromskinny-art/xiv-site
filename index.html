@@ -14,7 +14,6 @@ body {
     text-align: center;
 }
 
-/* ENTER SCREEN */
 #enterScreen {
     position: fixed;
     width: 100%;
@@ -44,13 +43,11 @@ body {
     font-size: 18px;
 }
 
-/* MAIN CONTENT */
 #mainContent {
     display: none;
     padding-top: 15vh;
 }
 
-/* GLITCH */
 .glitch {
     font-size: 70px;
     position: relative;
@@ -92,14 +89,6 @@ body {
     animation: flicker 2s infinite;
 }
 
-.visitor-counter {
-    margin-top: 25px;
-    font-size: 16px;
-    color: #00ffcc;
-    letter-spacing: 3px;
-    animation: flicker 3s infinite;
-}
-
 @keyframes glitchTop {
     0% { transform: translate(-2px,-2px); }
     100% { transform: translate(2px,2px); }
@@ -120,29 +109,21 @@ body {
 
 <body>
 
-<!-- ENTER SCREEN -->
 <div id="enterScreen">
     <div class="enter-title">IM A MONSTER</div>
     <button class="enter-btn" onclick="enterSite()">ENTER</button>
 </div>
 
-<!-- MAIN SITE -->
 <div id="mainContent">
-
     <h1 class="glitch" data-text="xiv">xiv</h1>
 
     <div class="glitch-small">
-        Cen • Geld •Convictings • Hateful • Policy • c0 • Detected • Assume
+        Policy • Detected • Geld • Convictings • Assume • Hateful • Cen
     </div>
 
     <div class="code-glitch">
         764 333 ST
     </div>
-
-    <div id="viewCount" class="visitor-counter">
-        [ CONNECTIONS: 00000 ]
-    </div>
-
 </div>
 
 <!-- MUSIC -->
@@ -160,22 +141,12 @@ function enterSite() {
     document.getElementById("enterScreen").style.display = "none";
     document.getElementById("mainContent").style.display = "block";
 
-    // PUT THE YOUTUBE VIDEO ID BELOW
-    let videoID = "1Gj8rO77Q";
+    let videoID = "o-1Gj8rO77Q";
 
     document.getElementById("musicFrame").src =
         "https://www.youtube.com/embed/" + videoID +
-        "?autoplay=1&loop=1&playlist=" + videoID;
+        "?autoplay=1&mute=0&loop=1&playlist=" + videoID;
 }
-
-// Visitor Counter
-fetch("https://api.countapi.xyz/hit/xiv764site/visits")
-.then(response => response.json())
-.then(data => {
-    let count = data.value.toString().padStart(5, '0');
-    document.getElementById("viewCount").innerHTML =
-        "[ CONNECTIONS: " + count + " ]";
-});
 </script>
 
 </body>

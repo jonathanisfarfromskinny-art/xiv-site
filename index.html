@@ -5,6 +5,9 @@
 <title>xiv</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
@@ -89,6 +92,30 @@ body {
     animation: flicker 2s infinite;
 }
 
+/* SOCIAL LINKS */
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    font-size: 40px;
+    margin: 0 25px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+
+    /* Constant White Glow */
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #ffffff,
+        0 0 40px #ffffff;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
 @keyframes glitchTop {
     0% { transform: translate(-2px,-2px); }
     100% { transform: translate(2px,2px); }
@@ -122,8 +149,24 @@ body {
     </div>
 
     <div class="code-glitch">
-        764 333 ST
+        Contact Info Below
     </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-links">
+        <a href="https://discord.com/users/necrassim" target="_blank">
+            <i class="fab fa-discord"></i>
+        </a>
+
+        <a href="https://tiktok.com/@xivishere" target="_blank">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <a href="https://t.me/copeopsec" target="_blank">
+            <i class="fab fa-telegram"></i>
+        </a>
+    </div>
+
 </div>
 
 <!-- MUSIC -->
@@ -151,5 +194,3 @@ function enterSite() {
 
 </body>
 </html>
-
-

@@ -10,10 +10,16 @@
 <style>
 body {
     margin: 0;
-    background: black;
-    color: #ff0000;
     font-family: 'Courier New', monospace;
     text-align: center;
+    color: #ff0000;
+
+    /* 🔥 BACKGROUND IMAGE */
+    background: 
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+        url("background.gif") no-repeat center center fixed;
+
+    background-size: cover;
 }
 
 /* ENTER SCREEN */
@@ -33,7 +39,6 @@ body {
     font-size: 40px;
     letter-spacing: 5px;
     margin-bottom: 20px;
-    color: #ff0000;
     animation: horrorGlow 1.5s infinite alternate;
 }
 
@@ -44,7 +49,7 @@ body {
     color: #ff0000;
     cursor: pointer;
     font-size: 18px;
-    box-shadow: 0 0 10px #ff0000;
+    box-shadow: 0 0 15px #ff0000;
 }
 
 /* MAIN CONTENT */
@@ -53,40 +58,32 @@ body {
     padding-top: 15vh;
 }
 
-/* BIG xiv GLOW */
+/* BIG xiv */
 .glitch {
     font-size: 90px;
-    position: relative;
     display: inline-block;
-    color: #ff0000;
     text-shadow:
         0 0 10px #ff0000,
         0 0 30px #ff0000,
         0 0 60px #8b0000,
-        0 0 120px #8b0000,
-        0 0 200px #8b0000;
+        0 0 150px #8b0000;
     animation: horrorGlow 1.5s infinite alternate;
 }
 
-/* SMALL QUOTE */
 .glitch-small {
     margin-top: 15px;
     font-size: 20px;
     letter-spacing: 3px;
-    color: #ff0000;
     animation: horrorGlow 1.5s infinite alternate;
 }
 
-/* CONTACT TEXT */
 .code-glitch {
     margin-top: 20px;
     font-size: 24px;
-    color: #ff0000;
     letter-spacing: 4px;
     animation: horrorGlow 1.5s infinite alternate;
 }
 
-/* SOCIAL LINKS */
 .social-links {
     margin-top: 40px;
 }
@@ -96,34 +93,28 @@ body {
     margin: 0 25px;
     color: #ff0000;
     text-decoration: none;
-    transition: 0.3s ease-in-out;
     text-shadow:
         0 0 10px #ff0000,
-        0 0 30px #ff0000,
-        0 0 60px #8b0000;
+        0 0 40px #8b0000;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
     transform: scale(1.2);
 }
 
-/* HEAVY RED NEON GLOW */
 @keyframes horrorGlow {
     0% {
         text-shadow:
             0 0 10px #ff0000,
             0 0 30px #ff0000,
-            0 0 60px #8b0000,
-            0 0 120px #8b0000;
-        opacity: 1;
+            0 0 60px #8b0000;
     }
     100% {
         text-shadow:
             0 0 20px #ff0000,
-            0 0 50px #ff0000,
-            0 0 100px #8b0000,
-            0 0 180px #8b0000;
-        opacity: 0.85;
+            0 0 60px #ff0000,
+            0 0 150px #8b0000;
     }
 }
 </style>
